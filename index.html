@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Template Switcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Certificate Generator</h1>
+      <p>Select a certificate template:</p>
+      <select id="templateSelector">
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <option value="template3">Template 3</option>
+      </select>
+    </header>
+
+    <div class="certificate" id="certificate">
+      <div class="template1" id="template1">
+        <h2>Certificate of Achievement</h2>
+        <p class="name">This certifies that</p>
+        <h3 class="recipient">[Recipient Name]</h3>
+        <p class="description">Has successfully completed the course.</p>
+        <footer class="footer">
+          <p>Issued by [Organization Name]</p>
+          <p>[Date]</p>
+        </footer>
+      </div>
+
+      <div class="template2" id="template2">
+        <h2>Certificate of Excellence</h2>
+        <p class="name">Awarded to</p>
+        <h3 class="recipient">[Recipient Name]</h3>
+        <p class="description">For outstanding performance.</p>
+        <footer class="footer">
+          <p>[Organization Name]</p>
+          <p>[Date]</p>
+        </footer>
+      </div>
+
+      <div class="template3" id="template3">
+        <h2>Diploma of Completion</h2>
+        <p class="name">This is to certify that</p>
+        <h3 class="recipient">[Recipient Name]</h3>
+        <p class="description">Has successfully completed the required program.</p>
+        <footer class="footer">
+          <p>[Organization Name]</p>
+          <p>[Date]</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="window.print()">Print Certificate</button>
+
+  <script src="template.js"></script>
+</body>
+</html>
