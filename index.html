@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certificate Template Switcher</title>
-  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kapakana&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'Kapakana';
+        src: url('path-to-your-font/kapakana.woff2') format('woff2'),
+             url('path-to-your-font/kapakana.woff') format('woff');
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
 
   <div class="container">
     <header>
+
+      <div class="kapakana-wrapper">      
       <h1>Certificate Generator</h1>
       <p>Select a certificate template:</p>
       <select id="templateSelector">
@@ -21,13 +31,18 @@
 
     <div class="certificate" id="certificate">
       <div class="template1" id="template1">
+        <img src="images/Group 1.png">
         <h2>Certificate of Achievement</h2>
-        <p class="name">This certifies that</p>
-        <h3 class="recipient">[Recipient Name]</h3>
-        <p class="description">Has successfully completed the course.</p>
+        <p class="name">This certificate is proudly presented to :</p>
+        <h3 class="recipient">[Insert Name]</h3>
+        <img src="images/Group 3.png">
+        <p class="description">This certificate is given to [Insert Name] for their achievement in the field of ... and proves that they're competent for their field.</p>
+        <img src="images/Group 4.png">
         <footer class="footer">
           <p>Issued by [Organization Name]</p>
           <p>[Date]</p>
+          <img src="images/Group 7.png">
+          <img src="images/Group 2.png"
         </footer>
       </div>
 

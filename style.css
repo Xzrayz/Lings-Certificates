@@ -17,6 +17,10 @@
     padding: 30px;
   }
   
+  .kapakana-wrapper {
+    font-family: 'Kapakana', sans-serif;
+  }
+  
   header {
     margin-bottom: 20px;
   }
@@ -35,7 +39,7 @@
   .certificate {
     margin-top: 30px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #000000;
     border: 1px solid #ddd;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -45,14 +49,17 @@
   }
   
   h2 {
-    font-size: 28px;
-    color: #2C3E50;
+    font-family: 'Kapakana', sans-serif;
+    font-size:35px;
+    color: #E4C284;
   }
-  
+  p{
+    color: white
+  }
   h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #E74C3C;
+    color: #E9C686
   }
   
   footer {
@@ -102,3 +109,4 @@
     }
   }
   
+ 
