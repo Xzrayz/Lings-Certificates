@@ -3,74 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificate Template Switcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kapakana&display=swap" rel="stylesheet">
-    <style>
-      @font-face {
-        font-family: 'Kapakana';
-        src: url('path-to-your-font/kapakana.woff2') format('woff2'),
-             url('path-to-your-font/kapakana.woff') format('woff');
-      }
-    </style>
-    <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Generate professional certificates with ease. Choose your template and add your custom name.">
+  <meta name="copyright" content="© 2025 Your Company Name. All rights reserved.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body> 
+
+<body>
 
   <div class="container">
     <header>
-
-      <div class="kapakana-wrapper">      
-      <h1>Certificate Generator</h1>
-      <p>Select a certificate template:</p>
-      <select id="templateSelector">
-        <option value="template1">Template 1</option>
-        <option value="template2">Template 2</option>
-        <option value="template3">Template 3</option>
-      </select>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#templates">Templates</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="certificate" id="certificate">
-      <div class="template1" id="template1">
-        <img src="images/Group 1.png">
-        <h2>Certificate of Achievement</h2>
-        <p class="name">This certificate is proudly presented to :</p>
-        <h3 class="recipient">[Insert Name]</h3>
-        <img src="images/Group 3.png">
-        <p class="description">This certificate is given to [Insert Name] for their achievement in the field of ... and proves that they're competent for their field.</p>
-        <img src="images/Group 4.png">
-        <footer class="footer">
-          <p>Issued by [Organization Name]</p>
-          <p>[Date]</p>
-          <img src="images/Group 7.png">
-          <img src="images/Group 2.png"
-        </footer>
-      </div>
+    <main id="templates">
+      <section class="certificate-generator">
+        <h1>Certificate Generator</h1>
+        <p>Select a template and enter your name to create your certificate</p>
 
-      <div class="template2" id="template2">
-        <h2>Certificate of Excellence</h2>
-        <p class="name">Awarded to</p>
-        <h3 class="recipient">[Recipient Name]</h3>
-        <p class="description">For outstanding performance.</p>
-        <footer class="footer">
-          <p>[Organization Name]</p>
-          <p>[Date]</p>
-        </footer>
-      </div>
+        <!-- Template Selector Dropdown -->
+        <div class="template-selection">
+          <label for="template-selector">Choose Certificate Template:</label>
+          <select id="template-selector" onchange="generateCertificate()">
+            <option value="template1">Template 1: Classic</option>
+            <option value="template2">Template 2: Elegant</option>
+            <option value="template3">Template 3: Modern</option>
+          </select>
+        </div>
 
-      <div class="template3" id="template3">
-        <h2>Diploma of Completion</h2>
-        <p class="name">This is to certify that</p>
-        <h3 class="recipient">[Recipient Name]</h3>
-        <p class="description">Has successfully completed the required program.</p>
-        <footer class="footer">
-          <p>[Organization Name]</p>
-          <p>[Date]</p>
-        </footer>
+        <!-- Name Input Field -->
+        <div class="form-container">
+          <label for="user-name">Enter Your Name:</label>
+          <input type="text" id="user-name" placeholder="Name..">
+          <button onclick="generateCertificate()">Generate Certificate</button>
+        </div>
+
+        <!-- Certificate Preview -->
+        <div class="certificate-container" id="certificate-container">
+          <!-- Template 1 -->
+          <div class="certificate" id="template1">
+            <div class="certificate-header">
+              <h2>Certificate of Achievement</h2>
+              <p class="sub-title">Awarded to</p>
+            </div>
+            <div class="certificate-body">
+              <h3 id="certificate-name">[Your Name]</h3>
+              <p class="message">For outstanding performance and dedication.</p>
+            </div>
+            <div class="certificate-footer">
+              <span id="date"></span>
+            </div>
+          </div>
+
+          <!-- Template 2 -->
+          <div class="certificate" id="template2" style="display:none;">
+            <div class="certificate-header">
+              <img src="images/Achievement.png" alt="Logo" class="logo" />
+              <h2>Certificate of Excellence</h2>
+              <p class="sub-title">Awarded to</p>
+            </div>
+            <div class="certificate-body">
+              <h3 id="certificate-name-2">[Your Name]</h3>
+              <p class="message">In recognition of exceptional achievements.</p>
+            </div>
+            <div class="certificate-footer">
+              <span id="date-2"></span>
+            </div>
+          </div>
+
+          <!-- Template 3 -->
+          <div class="certificate" id="template3" style="display:none;">
+            <div class="certificate-header">
+              <h2>Certificate of Recognition</h2>
+              <p class="sub-title">Awarded to</p>
+            </div>
+            <div class="certificate-body">
+              <h3 id="certificate-name-3">[Your Name]</h3>
+              <p class="message">For continuous improvement and outstanding contributions.</p>
+            </div>
+            <div class="certificate-footer">
+              <span id="date-3"></span>
+            </div>
+          </div>
+
+          <button class="print-btn" onclick="printCertificate()">Print Certificate</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2025 Lings Certificates. All Rights Reserved.</p>
+        <p>Donovan Xiong</p>
       </div>
-    </div>
+    </footer>
   </div>
-
-  <button onclick="window.print()">Print Certificate</button>
 
   <script src="template.js"></script>
 </body>
