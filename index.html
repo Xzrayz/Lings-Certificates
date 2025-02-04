@@ -10,7 +10,9 @@
   <title>Certificate Generator</title>
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -35,7 +37,7 @@
           <label for="template-selector">Choose Certificate Template:</label>
           <select id="template-selector" onchange="generateCertificate()">
             <option value="template1">Template 1: Classic</option>
-            <option value="template2">Template 2: Elegant</option>
+            <option value="template2">Template 2: Fancy</option>
             <option value="template3">Template 3: Modern</option>
           </select>
         </div>
@@ -65,20 +67,24 @@
           </div>
 
           <!-- Template 2 -->
+           <div class="dancing-script-Rice">
           <div class="certificate" id="template2" style="display:none;">
             <div class="certificate-header">
-              <img src="images/Achievement.png" alt="Logo" class="logo" />
+              
               <h2>Certificate of Excellence</h2>
-              <p class="sub-title">Awarded to</p>
+              <p class="sub-title">This Achievement is proudly presented to</p>
             </div>
             <div class="certificate-body">
               <h3 id="certificate-name-2">[Your Name]</h3>
-              <p class="message">In recognition of exceptional achievements.</p>
+              <Hr>
+              <p class="message">This certificate is given for their achievement in the field of ... and proves that they're is competent for this field.</p>
             </div>
+            <img src="images/Achievement.png" alt="Logo" class="logo" />
             <div class="certificate-footer">
               <span id="date-2"></span>
             </div>
           </div>
+        </div>
 
           <!-- Template 3 -->
           <div class="certificate" id="template3" style="display:none;">

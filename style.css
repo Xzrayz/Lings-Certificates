@@ -12,6 +12,15 @@ body {
   line-height: 1.6;
 }
 
+/* <weight>: Use a value from 400 to 700 */
+/* <uniquifier>: Use a unique and descriptive class name*/
+.dancing-script-Rice{
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,7 +49,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #3498db;
+  color: #000000;
 }
 
 /* Certificate Generator */
@@ -54,7 +63,7 @@ header nav ul li a:hover {
 }
 
 .certificate-generator p {
-  font-size: 1.2rem;
+  font-size: x-large;
   margin-bottom: 30px;
 }
 
@@ -95,6 +104,10 @@ button {
   margin-top: 20px;
 }
 
+hr{
+  border-color: #E9C686;
+}
+
 button:hover {
   background-color: #2980b9;
 }
@@ -106,37 +119,38 @@ button:hover {
   animation: fadeIn 1s ease-out;
 }
 
+/*styles for the Certificate award*/
 .certificate {
-  background-color: #34495e;
-  border-radius: 12px;
-  padding: 30px;
+  background-image: url(images/Certificate.png);
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  padding: 40px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .certificate-header h2 {
   font-size: 3rem;
-  color: #3498db;
+  color: #E9C686; /*Sets the color of the Certificate of Achievement*/
 }
 
 .sub-title {
   font-size: 1.5rem;
-  color: #bdc3c7;
+  color: #ffffff;
 }
 
 #certificate-name, #certificate-name-2, #certificate-name-3 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
-  color: #ecf0f1;
+  color: #E9C686; /*Sets the color of the Text-Name*/
   margin: 20px 0;
 }
 
 .message {
-  font-size: 1.3rem;
-  color: #ecf0f1;
+  font-size: xx-large;
+  color: #ecf0f1; /*Message about achievement*/
 }
 
 .certificate-footer {
