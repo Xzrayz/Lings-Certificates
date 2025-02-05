@@ -118,16 +118,18 @@ button:hover {
   margin-top: 30px;
   animation: fadeIn 1s ease-out;
 }
-
 /*styles for the Certificate award*/
 .certificate {
-  background-image: url(images/Certificate.png);
   background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #000000;
   border-radius: 2px;
-  padding: 40px;
+  border-style: solid;
+  border-color: #E9C686;
+  padding: 30px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
