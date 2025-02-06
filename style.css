@@ -1,222 +1,83 @@
-/* Global Styles */
-* {
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222222;
+  color: white;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  line-height: 1.6;
-}
-
-/* <weight>: Use a value from 400 to 700 */
-/* <uniquifier>: Use a unique and descriptive class name*/
-.dancing-script-Rice{
-  font-family: "Dancing Script", serif;
-  font-optical-sizing: auto;
-  font-weight: 400px;
-  font-style: normal;
-}
-/*Font #2*/
-.satisfy-regular {
-  font-family: "Satisfy", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-/*Font #3*/
-.ballet-ling {
-  font-family: "Ballet", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-header nav ul {
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-header nav ul li a {
-  color: #ecf0f1;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #000000;
-}
-
-/* Certificate Generator */
-.certificate-generator {
-  text-align: center;
-}
-
-.certificate-generator h1 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.certificate-generator p {
-  font-size: x-large;
-  margin-bottom: 30px;
-}
-
-.template-selection {
-  margin-bottom: 20px;
-}
-
-select {
-  padding: 12px;
-  font-size: 1rem;
-  width: 60%;
-  max-width: 300px;
-  border-radius: 6px;
-  border: 2px solid #3498db;
-  background-color: #34495e;
-  color: #ecf0f1;
-}
-
-input {
-  padding: 12px;
-  font-size: 1rem;
-  width: 60%;
-  max-width: 300px;
-  border-radius: 6px;
-  border: 2px solid #3498db;
-  background-color: #34495e;
-  color: #ecf0f1;
-}
-
-button {
-  padding: 12px 24px;
-  background-color: #3498db;
-  border: none;
+.dropdown, .name-input {
+  background-color: #333333;
   color: white;
-  font-size: 1.2rem;
-  border-radius: 6px;
+  border: 1px solid #555;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.print-button {
+  background-color: #444444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
-  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-hr{
-  border-color: #E9C686;
+.print-button:hover {
+  background-color: #666;
 }
 
-button:hover {
-  background-color: #2980b9;
-}
-
-/* Certificate Layout */
-.certificate-container {
-  display: none;
-  margin-top: 30px;
-  animation: fadeIn 1s ease-out;
-}
-/*styles for the Certificate award*/
 .certificate {
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-color: #000000;
-  border-radius: 2px;
-  border-style: solid;
-  border-color: #E9C686;
-  padding: 30px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #555;
+  width: 9.5in;
+  height: 6in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 20px;
+  background-color: #333333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.certificate-header h2 {
-  font-size: 3rem;
-  color: #E9C686; /*Sets the color of the Certificate of Achievement*/
-}
-
-.sub-title {
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
-#certificate-name, #certificate-name-2, #certificate-name-3 {
-  font-size: 4.5rem;
+.certificate h2 {
+  font-size: 2rem;
   font-weight: bold;
-  color: #E9C686; /*Sets the color of the Text-Name*/
-  margin: 20px 0;
 }
 
-.message {
-  font-size: xx-large;
-  color: #ecf0f1; /*Message about achievement*/
-}
-
-.certificate-footer {
-  font-size: 1.2rem;
-  margin-top: 30px;
-}
-
-.print-btn {
-  padding: 12px 24px;
-  background-color: #2ecc71;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.print-btn:hover {
-  background-color: #27ae60;
-}
-
-/* Footer */
-footer {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 1rem;
-  color: #bdc3c7;
-}
-
-/* Animations */
+/* Animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
+  0% {
+      opacity: 0;
   }
-  to {
-    opacity: 1;
+  100% {
+      opacity: 1;
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-  .certificate-generator h1 {
-    font-size: 2rem;
-  }
+.certificate-template {
+  display: none;
+}
 
-  input, select {
-    width: 80%;
-  }
-
-  .certificate {
-    padding: 20px;
-  }
+.show {
+  display: block;
 }

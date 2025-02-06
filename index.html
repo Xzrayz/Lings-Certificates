@@ -1,123 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Your Name">
-  <meta name="description" content="Generate professional certificates with ease. Choose your template and add your custom name.">
-  <meta name="copyright" content="© 2025 Your Company Name. All rights reserved.">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Ling's Certificates</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Font #1 -->
-  
-  <!--Google Font #2-->
-
-  <!--Google Font #3-->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+    <h1>Choose Your Certificate</h1>
+    
+    <select class="dropdown" id="templateSelect">
+        <option value="template1">Sigma</option>
+        <option value="template2">Top G</option>
+        <option value="template3">Squid Games</option>
+    </select>
+    
+    <input type="text" id="nameInput" class="name-input" placeholder="Enter Name" />
 
-  <div class="container">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#templates">Templates</a></li>
-        </ul>
-      </nav>
-    </header>
+    <button class="print-button" onclick="printCertificate()">Print Certificate</button>
+    
+    <div id="template1" class="certificate certificate-template show">
+        <h2>Certificate of Achievement</h2>
+        <p>Presented to <span id="name1">[Name]</span></p>
+    </div>
+    <div id="template2" class="certificate certificate-template">
+        <h2>Certificate of Excellence</h2>
+        <p>Awarded to <span id="name2">[Name]</span></p>
+    </div>
+    <div id="template3" class="certificate certificate-template">
+        <h2>Certificate of Recognition</h2>
+        <p>Granted to <span id="name3">[Name]</span></p>
+    </div>
 
-    <main id="templates">
-      <section class="certificate-generator">
-        <h1>Certificate Generator</h1>
-        <p>Select a template and enter your name to create your certificate</p>
-
-        <!-- Template Selector Dropdown -->
-        <div class="template-selection">
-          <label for="template-selector">Choose Certificate Template:</label>
-          <select id="template-selector" onchange="generateCertificate()">
-            <option value="template1">Sigma</option>
-            <option value="template2">Alpha</option>
-            <option value="template3">Omega</option>
-          </select>
-        </div>
-
-        <!-- Name Input Field -->
-        <div class="form-container">
-          <label for="user-name">Enter Your Name:</label>
-          <input type="text" id="user-name" placeholder="Name..">
-          <button onclick="generateCertificate()">Generate Certificate</button>
-        </div>
-
-        <!-- Certificate Preview -->
-        <div class="certificate-container" id="certificate-container">
-          <!-- Template 1 -->
-              <!--Add Font element name-->
-           <div class="">
-          <div class="certificate" id="template1">
-            <div class="certificate-header">
-              <h2>Certificate of Achievement</h2>
-              <p class="sub-title">Awarded to</p>
-            </div>
-            <div class="certificate-body">
-              <h3 id="certificate-name">[Your Name]</h3>
-              <p class="message">For outstanding performance and dedication.</p>
-            </div>
-            <div class="certificate-footer">
-              <span id="date"></span>
-            </div>
-          </div>
-        </div>
-          <!-- Template 2 -->
-              <!--Add Font element name-->
-           <div class="">
-          <div class="certificate" id="template2" style="display:none;">
-            <div class="certificate-header">
-              <h2>Certificate of Excellence</h2>
-              <p class="sub-title">This Achievement is proudly presented to</p>
-            </div>
-            <div class="certificate-body">
-              <h3 id="certificate-name-2">[Your Name]</h3>
-              <hr>
-              <p class="message">This certificate is given for their achievement in the field of Poetry and proves that they're is competent for this field.</p>
-            </div>
-            <img src="images/Achievement.png" alt="Logo" class="logo" />
-            <div class="certificate-footer">
-              <span id="date-2"></span>
-            </div>
-          </div>
-        </div>
-
-          <!-- Template 3 -->
-              <!--Add Font element name-->
-            <div class="">
-          <div class="certificate" id="template3" style="display:none;">
-            <div class="certificate-header">
-              <h2>Certificate of Recognition</h2>
-              <p class="sub-title">Awarded to</p>
-            </div>
-            <div class="certificate-body">
-              <h3 id="certificate-name-3">[Your Name]</h3>
-              <p class="message">For continuous improvement and outstanding contributions.</p>
-            </div>
-            <div class="certificate-footer">
-              <span id="date-3"></span>
-            </div>
-          </div>
-        </div>
-          <button class="print-btn" onclick="printCertificate()">Print Certificate</button>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <p>&copy; 2025 Lings Certificates. All Rights Reserved.</p>
-        <p>Donovan Xiong</p>
-      </div>
-    </footer>
-  </div>
-
-  <script src="template.js"></script>
+    <script src="template.js"></script>
 </body>
 </html>
