@@ -44,6 +44,8 @@ h1 {
 }
 
 .certificate {
+  background-image: url(images/Group\ 2\ \(1\).png);
+  background-repeat: no-repeat;
   border: 2px solid #555;
   width: 9.5in;
   height: 6in;
