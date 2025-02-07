@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #222222;
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
   display: flex;
@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
@@ -44,11 +44,11 @@ h1 {
 }
 
 .certificate {
-  background-image: url(images/Group\ 2\ \(1\).png);
+  background-image: url(images/Fortnite.png);
   background-repeat: no-repeat;
   border: 2px solid #555;
   width: 9.5in;
-  height: 6in;
+  height: 5.5in;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,8 +62,9 @@ h1 {
 }
 
 .certificate h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
+  color: black;
 }
 
 /* Animation */
