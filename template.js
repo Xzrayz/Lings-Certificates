@@ -17,13 +17,9 @@ function updateCertificate() {
   nameSpan.textContent = name || "[Name]";
 }
 
-// Print the certificate
+// Function to trigger printing (this is triggered by the button click in the HTML)
 function printCertificate() {
-  const printWindow = window.open('', '', 'height=800,width=600');
-  const content = document.querySelector('.certificate.show').outerHTML;
-  printWindow.document.write(content);
-  printWindow.document.close();
-  printWindow.print();
+  window.print(); // This opens the print dialog
 }
 
 // Event listeners for input and dropdown changes
